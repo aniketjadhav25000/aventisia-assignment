@@ -25,7 +25,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="w-64 border-r border-gray-100 bg-white h-full flex flex-col py-6 overflow-y-auto shrink-0">
+    <div className="hidden lg:flex w-64 border-r border-gray-100 bg-white h-full flex-col py-6 overflow-y-auto shrink-0">
       {sections.map((section, idx) => (
         <div key={idx} className="mb-6">
           <h3 className="px-6 text-[10px] font-bold text-gray-400 tracking-widest mb-3 uppercase">{section.title}</h3>

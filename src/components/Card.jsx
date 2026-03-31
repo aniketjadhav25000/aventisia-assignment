@@ -5,7 +5,7 @@ function Card({ title, description, date }) {
     <div className="bg-white border border-gray-200 p-5 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-[180px]">
       <div className="flex justify-between items-start mb-2">
         <h3 className="font-bold text-gray-800 text-sm">{title}</h3>
-        <button className="text-gray-6  00 hover:text-gray-600 transition">
+        <button className="text-gray-400 hover:text-gray-600 transition">
           <MoreVertical size={16} />
         </button>
       </div>

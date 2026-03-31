@@ -3,26 +3,25 @@ import logo from '../assets/Aventisia logo.jpg';
 
 function Header() {
   return (
-    <div className="bg-[#1E1B4B] h-14 flex items-center justify-between px-6 text-white w-full z-10 shrink-0">
+    <div className="bg-[#1E1B4B] h-14 flex items-center justify-between px-4 md:px-6 text-white w-full z-10 shrink-0">
       {/* Left Section: Branding & Workspace */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 md:gap-4">
         <div className="flex items-center gap-2">
-          {/* Using the imported logo variable for production safety */}
           <img 
             src={logo} 
             alt="Logo" 
-            className="h-7 w-auto object-contain rounded" 
+            className="h-6 md:h-7 w-auto object-contain rounded" 
           />
-          <span className="font-bold text-xl tracking-tight">Worcspace</span>
+          <span className="font-bold text-lg md:text-xl tracking-tight">Worcspace</span>
         </div>
         
-        <div className="flex items-center bg-[#2D2A5D] px-3 py-1.5 rounded-md text-[11px] ml-4 cursor-pointer hover:bg-[#373370] transition-colors">
+        <div className="hidden sm:flex items-center bg-[#2D2A5D] px-3 py-1.5 rounded-md text-[11px] ml-4 cursor-pointer hover:bg-[#373370] transition-colors">
           Worcspace 1 <ChevronDown size={14} className="ml-2 text-gray-400" />
         </div>
       </div>
 
-      {/* Middle Section: Global Search Bar */}
-      <div className="flex-1 max-w-xl mx-8">
+      {/* Middle Section: Global Search Bar (Hidden on Mobile) */}
+      <div className="hidden md:block flex-1 max-w-xl mx-8">
         <div className="relative group">
           <Search size={14} className="absolute left-3 top-2.5 text-gray-400" />
           <input 
@@ -37,10 +36,9 @@ function Header() {
       </div>
 
       {/* Right Section: Actions & Profile */}
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-4 md:gap-5">
         <div className="relative cursor-pointer group">
           <Bell size={18} className="text-gray-300 group-hover:text-white transition-colors" />
-          {/* Added a small notification dot common in UI dashboards */}
           <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full border border-[#1E1B4B]"></span>
         </div>
         

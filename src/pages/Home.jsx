@@ -14,26 +14,28 @@ function Home() {
       <Header />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar />
-        <main className="flex-1 p-10 overflow-y-auto bg-white">
-          <div className="flex justify-between items-center mb-8">
+        <main className="flex-1 p-6 md:p-10 overflow-y-auto bg-white">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <h2 className="text-xl font-bold text-gray-800">Knowledge Base</h2>
-            <div className="flex gap-4">
-              <div className="relative">
+            <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+              <div className="relative w-full md:w-72">
                 <Search size={14} className="absolute left-3 top-2.5 text-gray-400" />
-                <input type="text" placeholder="Search..." className="pl-10 pr-4 py-2 border border-gray-100 rounded-lg text-[11px] w-72 outline-none" />
+                <input type="text" placeholder="Search..." className="w-full pl-10 pr-4 py-2 border border-gray-100 rounded-lg text-[11px] outline-none" />
               </div>
-              <button onClick={() => setOpen(true)} className="bg-[#4F46E5] text-white px-4 py-2 rounded-lg text-[11px] font-bold flex items-center gap-2 hover:bg-[#4338CA] transition shadow-sm">
+              <button onClick={() => setOpen(true)} className="bg-[#4F46E5] text-white px-4 py-2 rounded-lg text-[11px] font-bold flex items-center justify-center gap-2 hover:bg-[#4338CA] transition shadow-sm w-full sm:w-auto">
                 <Plus size={16} /> Create New
               </button>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-6 border border-gray-200 pt-3 px-3 pb-4 rounded-lg">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 border border-gray-200 pt-3 px-3 pb-4 rounded-lg">
             {items.map((item, idx) => <Card key={idx} {...item} />)}
           </div>
-          {/* Exact Pagination Footer */}
-          <div className="mt-20 flex justify-between items-center text-[11px] text-gray-500">
+
+          {/* Pagination Footer */}
+          <div className="mt-12 md:mt-20 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-500 gap-4">
             <span className="font-bold">6 rows</span>
-            <div className="flex items-center gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-8">
               <div className="flex items-center gap-2 font-bold">
                 <span>Rows per page</span>
                 <div className="flex items-center border border-gray-100 rounded px-2 py-1 gap-2 cursor-pointer">
