@@ -11,6 +11,7 @@ The goal was to replicate a high-fidelity Figma design using **React** and **Tai
 
 ### **Core Features**
 
+* **Responsive Design**: Built with a mobile-first approach. The layout handles various screen sizes gracefully—the sidebar toggles off on mobile, the card grid adjusts its column count, and the creation drawer becomes full-screen for better usability on smaller touches.
 * **Knowledge Base Grid**: A clean, organized layout for managing data entries, housed within a professional light-grey bordered container (`bg-[#F9FAFB]`).
 * **Interactive Side Drawer (Modal)**: A fully functional "Create New Knowledge Base" form that slides out from the right, matching the specific design requirements for data input.
 * **Case-Sensitive Asset Management**: Fixed logo and image pathing issues to ensure 100% visibility on Linux-based production environments like Vercel.
